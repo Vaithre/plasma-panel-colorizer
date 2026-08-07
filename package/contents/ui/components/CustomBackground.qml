@@ -1101,14 +1101,13 @@ Rectangle {
 
     property bool hovered: hoverHandler.hovered
     onHoveredChanged: {
-        if (hovered) {
+        if (hovered && rect.inTray && (rect.iconName || rect.trayIconHash)) {
             logTrayIcon();
         }
     }
     HoverHandler {
         id: hoverHandler
         parent: rect.target
-        enabled: rect.inTray && (rect.iconName || rect.trayIconHash)
     }
 
     Rectangle {
