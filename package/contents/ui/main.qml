@@ -890,7 +890,7 @@ PlasmoidItem {
     toolTipSubText: {
         let text = "";
         if (onDesktop) {
-            text = "<font color='" + Kirigami.Theme.neutralTextColor + "'>Panel not found, this widget must be child of a panel</font>";
+            text = `<font color="${Kirigami.Theme.neutralTextColor}">` + i18n("This widget must be placed in a panel to work!") + "</font>";
         } else if (Plasmoid.configuration.isEnabled) {
             const name = Plasmoid.configuration.lastPreset.split("/");
             if (name.length) {
@@ -899,7 +899,7 @@ PlasmoidItem {
         }
         return text;
     }
-    toolTipTextFormat: Text.PlainText
+    toolTipTextFormat: Text.RichText
 
     function updatePlasmoidStatus() {
         Plasmoid.status = (editMode || !hideWidget || !runningLatest) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus;
