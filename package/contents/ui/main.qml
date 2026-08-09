@@ -607,6 +607,7 @@ PlasmoidItem {
     onEditModeChanged: {
         if (editMode)
             return;
+        Qt.callLater(updatePlasmoidStatus);
         Qt.callLater(initAll);
     }
 
