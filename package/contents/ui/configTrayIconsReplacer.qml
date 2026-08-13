@@ -172,7 +172,7 @@ KCM.ScrollViewKCM {
             Layout.margins: Kirigami.Units.mediumSpacing
         }
         Label {
-            text: i18n("1. Enable <b>Log icon changes</b> above<br>2. Run <b>journalctl -f</b> from terminal<br>3. Hover the System tray entry or trigger an icon change<br>4. Copy any of the properties: icon SHA1/name, title or name <br>5. Add a new rule with the SHA1/icon name/title/name you choose and specify the custom icon name or file")
+            text: i18n("1. Enable <b>Log icon changes</b> above<br>2. Run <b>journalctl -f</b> from terminal<br>3. Hover the System tray entry or trigger an icon change<br>4. Copy one of the properties: icon SHA1, icon name, name or title<br>5. Add a new rule with the matching property you choose and specify the replacement icon name or file")
             wrapMode: Label.WordWrap
             font.features: {
                 "tnum": 1
@@ -189,7 +189,7 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
         }
         Label {
-            text: i18n("<b>Note</b>: Some applications like Signal are missing accumulated notification icons, contribution of missing icons via GitHub pull request or issue is very welcome, please do so by providing the the description + SHA1/title/name + icon-name from Papirus (panel/status icons only if no matching icon exists, otherwise it can be omitted)")
+            text: i18n("<b>Note</b>: Some applications like Signal are missing accumulated notification icons, contribution of missing icons via GitHub pull request or issue is very welcome, please do so by providing the the description + icon SHA1/icon name/title/name + icon-name from Papirus (panel/status icons only if no matching icon exists, otherwise it can be omitted)")
             wrapMode: Label.WordWrap
             visible: showHowToLabel.checked
             Layout.margins: Kirigami.Units.mediumSpacing
